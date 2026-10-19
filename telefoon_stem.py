@@ -11,7 +11,7 @@ from flask import Flask, request, jsonify, render_template_string
 
 app = Flask(__name__)
 GEHEUGEN_PAD = os.path.join(os.path.dirname(os.path.abspath(__file__)), "jarvis_langetermijngeheugen.json")
-OLLAMA_API_URL = os.environ.get(OLLAMA_API_URL = os.environ.get("OLLAMA_API_URL", "https://ollama.com/api/chat"), "https://ollama.com/api/chat")
+OLLAMA_API_URL = os.OLLAMA_API_URL = os.environ.get("OLLAMA_API_URL", "https://ollama.com/api/chat")
 OLLAMA_MODEL = os.environ.get("OLLAMA_MODEL", "gpt-oss:20b-cloud")
 OLLAMA_API_KEY = os.environ.get("OLLAMA_API_KEY", "")
 
