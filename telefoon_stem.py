@@ -775,7 +775,6 @@ def vraag():
                     rate="+25%",
                     pitch="-12Hz"
                 )
-                )
                 tijdelijk = "static/jarvis_antwoord_nieuw.mp3"
                 await stem.save(tijdelijk)
                 os.replace(tijdelijk, "static/jarvis_antwoord.mp3")
