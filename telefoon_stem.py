@@ -751,7 +751,9 @@ def vraag():
             timeout=120
         )
         r.raise_for_status()
-        antwoord = r.json()["message"]["content"]
+        data = r.json()
+print("JARVIS AI-STATUS:", data.get("done"), data.get("done_reason"))
+antwoord = data["message"]["content"]
 
         gespreksgeheugen.extend([
             {"role": "user", "content": tekst},
