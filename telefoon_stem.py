@@ -768,11 +768,13 @@ def vraag():
 
         def maak_spraak_achtergrond():
             async def maak_spraak():
+                gesproken_antwoord = antwoord.replace("MOTIWAY", "mootie weej")
                 stem = edge_tts.Communicate(
-                    antwoord,
+                    gesproken_antwoord,
                     voice="nl-NL-MaartenNeural",
                     rate="+25%",
                     pitch="-12Hz"
+                )
                 )
                 tijdelijk = "static/jarvis_antwoord_nieuw.mp3"
                 await stem.save(tijdelijk)
