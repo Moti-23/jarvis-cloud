@@ -491,7 +491,7 @@ async function stuur() {
       const audioUrl = "/static/jarvis_antwoord.mp3?t=" + Date.now();
       let pogingen = 0;
       const controleerAudio = async () => {
-        while (pogingen < 120) {
+        while (pogingen < 300) {
           pogingen++;
           try {
             const controle = await fetch(audioUrl, {method: "HEAD", cache: "no-store"});
@@ -529,7 +529,7 @@ async function stuur() {
               return;
             }
           } catch(e) {}
-          await new Promise(resolve => setTimeout(resolve, 100));
+          await new Promise(resolve => setTimeout(resolve, 250));
         }
         antwoord.textContent += " De stem is nog niet klaar. Probeer opnieuw.";
       };
