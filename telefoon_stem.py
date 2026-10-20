@@ -744,11 +744,11 @@ def vraag():
             headers={"Authorization": f"Bearer {OLLAMA_API_KEY}"},
             json={
                 "model": OLLAMA_MODEL,
-                "options": {"num_predict": 500},
+                "options": {"num_predict": 1000},
                 "messages": berichten,
                 "stream": False
             },
-            timeout=12 ])0
+            timeout=120 
         )
         r.raise_for_status()
         data = r.json()
