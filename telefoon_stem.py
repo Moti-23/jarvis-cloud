@@ -768,7 +768,7 @@ def vraag():
 
         def maak_spraak_achtergrond():
             async def maak_spraak():
-                gesproken_antwoord = antwoord.replace("MOTIWAY", "mootie weej")
+                gesproken_antwoord = antwoord.replace("MOTIWAY", "moti way")
                 stem = edge_tts.Communicate(
                     gesproken_antwoord,
                     voice="nl-NL-MaartenNeural",
