@@ -744,7 +744,7 @@ def vraag():
             headers={"Authorization": f"Bearer {OLLAMA_API_KEY}"},
             json={
                 "model": OLLAMA_MODEL,
-                "options": {"num_predict": 250},
+                "options": {"num_predict": 500},
                 "messages": berichten,
                 "stream": False
             },
