@@ -778,7 +778,9 @@ def vraag():
                     pitch="-12Hz"
                 )
                 tijdelijk = "static/jarvis_antwoord_nieuw.mp3"
+                print("JARVIS: starten met maken van spraakbestand", flush=True)
                 await stem.save(tijdelijk)
+                print("JARVIS: spraakbestand aangemaakt", flush=True)
                 os.replace(tijdelijk, "static/jarvis_antwoord.mp3")
 
             try:
